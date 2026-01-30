@@ -197,7 +197,7 @@ idf_component_register(SRCS ${COMPONENT_SRC}
                        REQUIRES nvs_flash esp_wifi esp_eth esp_netif lwip driver)
 ```
 
-cd ../.. or go back with the procject directory
+cd ../.. or go back with the Mechanical manipulator directory
 
 
 then run the ff:

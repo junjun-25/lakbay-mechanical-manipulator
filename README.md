@@ -5,7 +5,7 @@ esp-idf v5.x <br>
 clone this repo <br>
 then in terminal run: <br>
 
-cd /lakbay-rover-mechanical-manipulator/Mechanical manipulator/components <br>
+cd /lakbay-mechanical-manipulator/Mechanical manipulator/components <br>
 
 in the components folder run: <br>
 

@@ -277,7 +277,7 @@ esp_err_t uros_network_interface_initialize(void)
    * Ensure the IP addresses match your network.
 
 
-###Return to the Main Project Directory
+### Return to the Main Project Directory
 
 ```bash
 cd ../..

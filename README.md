@@ -2,8 +2,8 @@ esp32-s3 was use, idk if esp32 will work but u can try
 
 requirements: <br>
 esp-idf v5.x <br>
-ROS2 Jazzy Jalisco
-micro-ros agent
+ROS2 Jazzy Jalisco <br>
+micro-ros agent <br> 
 
 
 clone this repo <br>

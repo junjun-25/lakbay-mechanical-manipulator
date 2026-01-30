@@ -61,7 +61,7 @@ Key features:
 Open a terminal and run:
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/junjun-25/lakbay-mechanical-manipulator.git
 
 cd /lakbay-mechanical-manipulator/Mechanical manipulator/components
 ```
@@ -72,6 +72,7 @@ cd /lakbay-mechanical-manipulator/Mechanical manipulator/components
 Inside the components folder:
 ```bash
 git clone https://github.com/micro-ROS/micro_ros_espidf_component.git
+
 cd micro_ros_espidf_component
 ```
 

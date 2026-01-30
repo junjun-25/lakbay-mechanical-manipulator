@@ -197,7 +197,7 @@ esp_err_t uros_network_interface_initialize(void)
 #endif
 ```
 
-then edit the section of CmakeLists.txt inside the micro_ros_espidf_components <br>
+then edit this section of CmakeLists.txt inside the micro_ros_espidf_components <br>
 
 ```cmake
 

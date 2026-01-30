@@ -1,8 +1,10 @@
-# Setup instruction of Micro-ROS on ESP32-S3 for the Mechanical Manipulator Lakbay Rover
+# Setup Instructions for Micro-ROS on ESP32-S3  
+## LAKBAY Mechanical Manipulator Rover
 
-This repository contains the firmware and setup instructions for running **Micro-ROS** on an **ESP32-S3** to control the LAKBAY 6-DOF mechanical manipulator. It allows the ESP32-S3 to communicate with a ROS 2 system using a **Micro-ROS Agent**, enabling realtime control, telemetry, and sensor integration.
+This repository contains the firmware and setup instructions for running **Micro-ROS** on an **ESP32-S3** to control the **LAKBAY 6-DOF mechanical manipulator**.  
+It enables the ESP32-S3 to communicate with a ROS 2 system using a **Micro-ROS Agent**, providing **real-time control, telemetry, and sensor integration**.
 
-> ⚠️ Note: ESP32 (non-S3) may work, but this guide is tested on ESP32-S3.
+> ⚠️ **Note**: ESP32 (non-S3) *may* work, but this setup is **tested and verified only on ESP32-S3**.
 
 ---
 
@@ -11,18 +13,13 @@ This repository contains the firmware and setup instructions for running **Micro
 1. [Requirements](#requirements)  
 2. [Project Overview](#project-overview)  
 3. [Setup Instructions](#setup-instructions)  
-   - [Clone the Repository](#clone-the-repository)  
-   - [Clone Micro-ROS Component](#clone-micro-ros-component)  
-   - [Clean Micro-ROS Library](#clean-micro-ros-library)  
-   - [Replace Network Interface](#replace-network-interface)  
-   - [Build and Flash ESP32-S3](#build-and-flash-esp32-s3)  
-   - [Run Micro-ROS Agent](#run-micro-ros-agent)  
-   - [Verify Connection](#verify-connection)  
 4. [Usage](#usage)  
 5. [Troubleshooting](#troubleshooting)  
 6. [References](#references)  
 
 ---
+
+
 
 ## Requirements
 
@@ -30,7 +27,6 @@ This repository contains the firmware and setup instructions for running **Micro
 - **ESP-IDF v5.x** ([Installation Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/index.html))  
 - **ROS 2 Jazzy Jalisco** ([Installation Guide](https://docs.ros.org/en/jazzy/Installation.html))  
 - **Micro-ROS Agent** ([Installation Guide](https://micro.ros.org/docs/tutorials/core/first_application_linux/))  
-
 
 ---
 
@@ -66,24 +62,32 @@ Open a terminal and run:
 
 ```bash
 git clone <your-repo-url>
-cd lakbay-mechanical-manipulator/Mechanical\ manipulator/components
 
-clone this repo <br>
-then in terminal run: <br>
+cd /lakbay-mechanical-manipulator/Mechanical manipulator/components
+```
 
-cd /lakbay-mechanical-manipulator/Mechanical manipulator/components <br>
 
-in the components folder run: <br>
 
-git clone https://github.com/micro-ROS/micro_ros_espidf_component.git <br>
+### Clone the Micro-ROS ESP-IDF Component
+Inside the components folder:
+```bash
+git clone https://github.com/micro-ROS/micro_ros_espidf_component.git
+cd micro_ros_espidf_component
+```
 
-cd micro_ros_espidf_component <br>
+### Clean the Micro-ROS Library
 
-make -f libmicroros.mk clean <br>
+```bash
+make -f libmicroros.mk clean
+```
 
-cd network_interfaces <br>
+### Replace the Network Interface Code
+Navigate to the network interface directory:
+```bash
+cd network_interfaces
+```
 
-then replace the code in the uros_ethernet_netif.c with: <br>
+Replace the contents of uros_ethernet_netif.c with the following code:
 
 ```c
 
@@ -262,6 +266,12 @@ esp_err_t uros_network_interface_initialize(void)
 
 #endif
 ```
+
+
+
+⚠️ Important
+
+   * Ensure the IP addresses match your network.
 
 then edit this section of CmakeLists.txt inside the micro_ros_espidf_components <br>
 

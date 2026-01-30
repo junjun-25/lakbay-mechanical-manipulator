@@ -207,12 +207,11 @@ cd ../.. or go back with the Mechanical manipulator directory
 
 then run the ff:
 
-idf.py fullclean
-idf.py reconfigure
+code .
 
-in the project directory run:
+vscode will open then open the esp-idf terminal then run the following commands:
 
 idf.py add-dependency "espressif/esp-dsp"
-
-
-then build the project
+idf.py fullclean
+idf.py reconfigure
+idf.py build

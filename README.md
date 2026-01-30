@@ -15,7 +15,6 @@ It enables the ESP32-S3 to communicate with a ROS 2 system using a **Micro-ROS A
 3. [Setup Instructions](#setup-instructions)  
 4. [Usage](#usage)  
 5. [Troubleshooting](#troubleshooting)  
-6. [References](#references)  
 
 ---
 
@@ -395,7 +394,4 @@ This will:
 
 https://github.com/user-attachments/assets/c62c71a4-ae30-43b2-b577-fd333899c85b
 
-
-
-## References
 

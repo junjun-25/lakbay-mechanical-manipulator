@@ -84,6 +84,7 @@ make -f libmicroros.mk clean
 ```
 
 ### Replace the Network Interface Code
+
 Navigate to the network interface directory:
 ```bash
 cd network_interfaces

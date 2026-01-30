@@ -1,3 +1,8 @@
+clone the repo
+then in terminal run:
+
+cd /lakbay-rover-mechanical-manipulator/Mechanical manipulator/components
+
 in the components folder run:
 
 git clone https://github.com/micro-ROS/micro_ros_espidf_component.git

@@ -33,7 +33,7 @@ It enables the ESP32-S3 to communicate with a ROS 2 ecosystem using a **Micro-RO
 
 This project provides the firmware, ROS 2 packages, and system integration required to control a 6-DOF Mechanical Manipulator using an ESP32-S3 running Micro-ROS.
 
-The ESP32-S3 acts as a real-time embedded controller, directly interfacing with motors and sensors, while a ROS 2 Jazzy system running on a PC handles higher-level control, visualization, and user interaction.
+The ESP32-S3 acts as a real-time controller, directly interfacing with motors and sensors, while a ROS 2 Jazzy system running on a PC handles higher-level control, visualization, and user interaction.
 
 Communication between the embedded system and ROS 2 is achieved through a Micro-ROS Agent, enabling reliable DDS-based messaging over UDP Ethernet.
 
@@ -57,7 +57,7 @@ Communication between the embedded system and ROS 2 is achieved through a Micro-
 │      ESP32-S3 (Micro-ROS)    │
 │  ─────────────────────────   │
 │  • FreeRTOS                  │
-│  • Micro-ROS Client          │
+│  • Micro-ROS Node            │
 │  • Ethernet Interface        │   
 └─────────┬────────────────────┘
           │ CAN BUS
